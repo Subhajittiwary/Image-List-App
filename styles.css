@@ -5,7 +5,7 @@ body{
     height: 100vh;
 }
 
-img section main{
+img, section, main, p{
     padding:0;
     margin:0;
 }
@@ -29,18 +29,28 @@ main{
     margin-bottom:20px;
     font-size: 20px;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .Image-Details-Img{
     border-radius:50%; 
     width:50px; 
-    height:50px; 
-    margin-left: 10px; 
+    height:50px;
+    min-width: 50px; 
+    margin-left: 10px;
     object-fit: cover;
 }
 
 .Image-Details-Label{
     margin-left: 10px;
+    font-size: 16px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 0;
+    height:80%;
 }
 
 #Image{
@@ -48,7 +58,14 @@ main{
     height: 600px;
     border-radius: 10px;
     object-fit: cover;
+    transition: transform .3s;
 }
+  
+#Image:hover {
+    transform: scale(1.01); 
+
+}
+
 
 .selectedImg{
     background-color:lightblue;
@@ -56,6 +73,7 @@ main{
 
 #Image-Area{
     margin-left: 20px;
+    width: 400px;
 }
 
 @media screen and (max-width: 900px) {
